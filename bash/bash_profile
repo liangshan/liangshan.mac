@@ -1,0 +1,11 @@
+# PATH
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/bin"
+
+# make sublime as default editor
+export EDITOR=$HOME/bin/subl
+
+# bashrc
+if [ -f "$HOME/.bashrc" ] ; then
+  source $HOME/.bashrc
+fi
+

@@ -1,0 +1,21 @@
+# Tell ls to be colourful
+export CLICOLOR=1
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+ 
+# Tell grep to highlight matches
+export GREP_OPTIONS='--color=auto'
+
+# user {pwd} ~ $ 
+export TERM="xterm-color"
+
+if [[ ${EUID} == 0 ]] ; then
+    PS1='\[\033[01;31m\]\h\[\033[01;34m\] \W \$\[\033[00m\] '
+else
+    PS1='\[\033[01;32m\]\u\[\033[01;33m\] \W\[\033[01;34m\] \$\[\033[00m\] '
+fi
+
+# git-ps1
+PS1="$PS1\$($( cat $HOME/bin/git-ps1.sh ))"
+
+# ll
+alias ll='ls -alh'
