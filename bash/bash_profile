@@ -1,8 +1,8 @@
 # PATH
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/bin"
 
-# make sublime as default editor
-export EDITOR=$HOME/bin/subl
+# make vim as default editor
+export EDITOR=vim
 
 # bashrc
 if [ -f "$HOME/.bashrc" ] ; then
