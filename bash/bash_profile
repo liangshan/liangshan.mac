@@ -1,5 +1,5 @@
 # PATH
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/bin"
+export PATH="/usr/local/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/bin"
 
 # make vim as default editor
 export EDITOR=vim
