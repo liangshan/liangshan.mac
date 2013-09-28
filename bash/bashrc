@@ -19,3 +19,8 @@ PS1="$PS1\$($( cat $HOME/bin/git-ps1.sh ))"
 
 # ll
 alias ll='ls -alh'
+
+# phpbrew
+if [ -f "$HOME/.phpbrew/bashrc" ]; then
+  source $HOME/.phpbrew/bashrc
+fi

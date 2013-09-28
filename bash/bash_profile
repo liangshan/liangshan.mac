@@ -9,8 +9,4 @@ if [ -f "$HOME/.bashrc" ] ; then
   source $HOME/.bashrc
 fi
 
-#phpbrew
-if [ -f "$HOME/.phpbrew/bashrc"]; then
-  source $HOME/.phpbrew/bashrc
-fi 
 
