@@ -17,6 +17,11 @@ fi
 # git-ps1
 PS1="$PS1\$($( cat $HOME/bin/git-ps1.sh ))"
 
+# git bash completion
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+fi
+
 # ll
 alias ll='ls -alh'
 
@@ -24,3 +29,6 @@ alias ll='ls -alh'
 if [ -f "$HOME/.phpbrew/bashrc" ]; then
   source $HOME/.phpbrew/bashrc
 fi
+
+# PATH
+export PATH="$HOME/bin:/usr/local/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin"
