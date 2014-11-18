@@ -15,7 +15,9 @@ else
 fi
 
 # git-ps1
-PS1="$PS1\$($( cat $HOME/bin/git-ps1.sh ))"
+if [ -f $HOME/bin/git-ps1.sh ]; then
+    PS1="$PS1\$($( cat $HOME/bin/git-ps1.sh ))"
+fi
 
 # git bash completion
 if [ -f `brew --prefix`/etc/bash_completion ]; then
