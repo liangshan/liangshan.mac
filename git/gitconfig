@@ -1,0 +1,16 @@
+[core]
+    autocrlf = input
+    whitespace = trailing-space,space-before-tab,indent-with-non-tab
+    editor = vim
+
+[user]
+    name = liangshan
+    email = 2lisum3@gmail.com
+
+[alias]
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    ci = commit
+    co = checkout
+    st = status -sb
+    track = checkout -t
+

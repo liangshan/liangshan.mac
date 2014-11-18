@@ -8,7 +8,7 @@ export GREP_OPTIONS='--color=auto'
 # user {pwd} ~ $ 
 export TERM="xterm-color"
 
-if [[ ${EUID} == 0 ]] ; then
+if [[ ${EUID} == 0 ]]; then
     PS1='\[\033[01;31m\]\h\[\033[01;34m\] \W \$\[\033[00m\] '
 else
     PS1='\[\033[01;32m\]\u\[\033[01;33m\] \W\[\033[01;34m\] \$\[\033[00m\] '
