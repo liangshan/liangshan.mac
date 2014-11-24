@@ -1,0 +1,15 @@
+{
+	"installed_packages":
+	[
+		"Git",
+		"Markdown Extended",
+		"Markdown Preview",
+		"Python Auto-Complete",
+		"Python PEP8 Autoformat",
+		"SCSS",
+		"SublimeLinter-jshint",
+		"SublimeLinter-php",
+		"SublimeLinter-pylint",
+		"Theme - Tech49"
+	]
+}

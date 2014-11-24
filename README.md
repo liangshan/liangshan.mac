@@ -17,24 +17,5 @@ $ cd bash && make
 ### Other installed packges
 
 + [stormssh](https://github.com/emre/storm)
-+ [sublime text 3](https://www.sublimetext.com/3) with packges below
-
-```
-{
-	"installed_packages":
-	[
-		"Git",
-		"Markdown Extended",
-		"Markdown Preview",
-		"Python Auto-Complete",
-		"Python PEP8 Autoformat",
-		"SCSS",
-		"SublimeLinter-jshint",
-		"SublimeLinter-php",
-		"SublimeLinter-pylint",
-		"Theme - Tech49"
-	]
-}
-
-```
++ [sublime text 3](https://www.sublimetext.com/3) 
 	
