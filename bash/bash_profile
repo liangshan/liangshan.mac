@@ -6,4 +6,9 @@ if [ -f "$HOME/.bashrc" ] ; then
   source $HOME/.bashrc
 fi
 
+# pyenv
+if [ -f "/usr/local/bin/pyenv" ]; then
+  eval "$(pyenv init -)"
+fi
+
 

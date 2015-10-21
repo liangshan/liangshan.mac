@@ -1,7 +1,9 @@
 liangshan.mac
 =============
 
-+ [Install homebrew][1] 
++ [Install homebrew][1], then
+    + `brew install git`
+    + `brew install pyenv`
 + [Install git-ps1][2]
 + [install git-bash-compelate][3]
 
@@ -27,6 +29,8 @@ $ cd bash && make
 
 #### Useful packages
 
+__NOTICE__: You have to install SublimeLinter first, then install all other `SublimeLinter` prefix packages
+
 ```
 {
     "installed_packages":
@@ -36,7 +40,7 @@ $ cd bash && make
         "Markdown Preview",
         "Python Auto-Complete",
         "Python PEP8 Autoformat",
-        "SCSS",
+        "SublimeLinter",
         "SublimeLinter-jshint",
         "SublimeLinter-php",
         "SublimeLinter-pylint",
