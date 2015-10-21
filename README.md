@@ -27,6 +27,13 @@ $ cd bash && make
 1. install [package control](https://packagecontrol.io/installation) first
 2. install `Theme - Tech49`, otherwise sublime will raise exception
 
+
+This will make subl executable in the command line:
+
+```
+$ ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl ~/bin/subl
+```
+
 #### Useful packages
 
 __NOTICE__: You have to install SublimeLinter first, then install all other `SublimeLinter` prefix packages
