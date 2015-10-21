@@ -17,5 +17,33 @@ $ cd bash && make
 ### Other installed packges
 
 + [stormssh](https://github.com/emre/storm)
++ [spectable](https://github.com/eczarny/spectacle)
 + [sublime text 3](https://www.sublimetext.com/3) 
+
+### Sublime Text 3
+
+1. install [package control](https://packagecontrol.io/installation) first
+2. install `Theme - Tech49`, otherwise sublime will raise exception
+
+#### Useful packages
+
+```
+{
+    "installed_packages":
+    [
+        "Git",
+        "Markdown Extended",
+        "Markdown Preview",
+        "Python Auto-Complete",
+        "Python PEP8 Autoformat",
+        "SCSS",
+        "SublimeLinter-jshint",
+        "SublimeLinter-php",
+        "SublimeLinter-pylint",
+        "Theme - Tech49"
+    ]
+}
+```
+
+
 	
