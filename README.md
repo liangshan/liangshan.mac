@@ -20,7 +20,7 @@ $ cd bash && make
 
 + [stormssh](https://github.com/emre/storm)
 + [spectable](https://github.com/eczarny/spectacle)
-+ [sublime text 3](https://www.sublimetext.com/3) 
++ [sublime text 3](https://www.sublimetext.com/3)
 
 ### Sublime Text 3
 
@@ -43,9 +43,9 @@ __NOTICE__: You have to install SublimeLinter first, then install all other `Sub
     "installed_packages":
     [
         "Git",
+        "Jedi - Python autocompletion",
         "Markdown Extended",
         "Markdown Preview",
-        "Python Auto-Complete",
         "Python PEP8 Autoformat",
         "SublimeLinter",
         "SublimeLinter-jshint",
@@ -57,4 +57,4 @@ __NOTICE__: You have to install SublimeLinter first, then install all other `Sub
 ```
 
 
-	
+
