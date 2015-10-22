@@ -1,10 +1,11 @@
 {
-	"color_scheme": "Packages/Theme - Tech49/Tech49.tmTheme",
-	"font_size": 13,
-	"ignored_packages":
-	[
-		"Vintage"
-	],
-	"translate_tabs_to_spaces": true,
-    "ensure_newline_at_eof_on_save": true
+    "color_scheme": "Packages/User/SublimeLinter/Tech49 (SL).tmTheme",
+    "ensure_newline_at_eof_on_save": true,
+    "font_size": 13,
+    "ignored_packages":
+    [
+        "Vintage"
+    ],
+    "translate_tabs_to_spaces": true,
+    "trim_trailing_white_space_on_save": true
 }
