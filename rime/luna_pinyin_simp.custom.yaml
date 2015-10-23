@@ -1,0 +1,27 @@
+# luna_pinyin.custom.yaml
+#
+# 在【朙月拼音】裏使用Emoji表情
+#
+# 保存到Rime用戶文件夾後，重新部署生效
+# ~/.config/ibus/rime  (linux)
+# ~/Library/Rime       (macos)
+# %APPDATA%\Rime       (windows)
+#
+# 如果目標文件已經包含其他修改內容，只需按照縮進合併 patch: 以下的部分
+#
+
+patch:
+  engine/translators:
+    - punct_translator
+    - r10n_translator
+    - reverse_lookup_translator
+  recognizer/patterns/reverse_lookup: "`[a-z]*$"
+  schema/dependencies:
+    - emoji
+  # abc_segmentor/extra_tags:
+  #   - reverse_lookup
+  reverse_lookup:
+    dictionary: emoji
+    enable_completion: false
+    prefix: "`"
+    tips: 〔表情〕
