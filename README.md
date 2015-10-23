@@ -1,6 +1,10 @@
 liangshan.mac
 =============
 
+All my personal Mac related configure here.
+
+### Git & Bash
+
 + [Install homebrew][1], then
     + `brew install git`
     + `brew install pyenv`
@@ -16,17 +20,16 @@ $ cd bash && make
 [2]: https://github.com/erning/git-ps1
 [3]: https://github.com/bobthecow/git-flow-completion/wiki/Install-Bash-git-completion
 
-### Other installed packges
-
-+ [stormssh](https://github.com/emre/storm)
-+ [spectable](https://github.com/eczarny/spectacle)
-+ [sublime text 3](https://www.sublimetext.com/3)
 
 ### Sublime Text 3
 
 1. install [package control](https://packagecontrol.io/installation) first
 2. install `Theme - Tech49`, otherwise sublime will raise exception
+3. install configure
 
+```
+$ cd sublime && make
+```
 
 This will make subl executable in the command line:
 
@@ -56,5 +59,16 @@ __NOTICE__: You have to install SublimeLinter first, then install all other `Sub
 }
 ```
 
+### Rime
 
+```
+$ cd rime && make
+```
+
+Remember click deploy after updated configure.
+
+### Other installed packges
+
++ [stormssh](https://github.com/emre/storm)
++ [spectable](https://github.com/eczarny/spectacle)
 
