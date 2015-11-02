@@ -1,12 +1,20 @@
 {
-    "color_scheme": "Packages/User/SublimeLinter/Tech49 (SL).tmTheme",
-    "ensure_newline_at_eof_on_save": true,
-    "font_size": 13,
-    "ignored_packages":
-    [
-        "Vintage"
-    ],
-    "translate_tabs_to_spaces": true,
-    "trim_trailing_white_space_on_save": true,
-    "folder_exclude_patterns": [".svn", ".git", ".hg", "CVS", "__pycache__"]
+	"color_scheme": "Packages/User/SublimeLinter/Tech49 (SL).tmTheme",
+	"ensure_newline_at_eof_on_save": true,
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		"__pycache__",
+		".*-cache"
+	],
+	"font_size": 13,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true
 }
