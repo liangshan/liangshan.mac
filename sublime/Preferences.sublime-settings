@@ -1,5 +1,6 @@
 {
 	"color_scheme": "Packages/User/SublimeLinter/Tech49 (SL).tmTheme",
+	"detect_indentation": false,
 	"ensure_newline_at_eof_on_save": true,
 	"folder_exclude_patterns":
 	[
@@ -15,8 +16,11 @@
 	[
 		"Vintage"
 	],
+	"rulers":
+	[
+		80,
+		120
+	],
 	"translate_tabs_to_spaces": true,
-	"trim_trailing_white_space_on_save": true,
-	"rulers": [80, 120],
-	"detect_indentation": false,
+	"trim_trailing_white_space_on_save": true
 }

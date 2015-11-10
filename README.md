@@ -45,10 +45,13 @@ __NOTICE__: You have to install SublimeLinter first, then install all other `Sub
 {
     "installed_packages":
     [
+        "EditorConfig",
         "Git",
         "Jedi - Python autocompletion",
         "Markdown Extended",
         "Markdown Preview",
+        "Open Finder",
+        "Package Control",
         "Python PEP8 Autoformat",
         "SublimeLinter",
         "SublimeLinter-jshint",
