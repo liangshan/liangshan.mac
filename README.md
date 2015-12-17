@@ -64,6 +64,10 @@ __NOTICE__: You have to install SublimeLinter first, then install all other `Sub
 
 ### Rime
 
+Download extended dictionary:
+
+https://bintray.com/rime-aca/dictionaries/luna_pinyin.dict
+
 ```
 $ cd rime && make
 ```
