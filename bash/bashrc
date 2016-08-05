@@ -33,4 +33,4 @@ if [ -f "$HOME/.phpbrew/bashrc" ]; then
 fi
 
 # PATH
-export PATH="$HOME/bin:/usr/local/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="$HOME/bin:/usr/local/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
