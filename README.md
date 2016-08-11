@@ -91,6 +91,10 @@ $ chsh -s /usr/local/bin/fish
 $ curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish
 $ omf install edan
 $ omf install sublime
+
+# Set custom path in fish
+$ set -U fish_user_paths $fish_user_paths /usr/local/sbin/
+$ set -U fish_user_paths $fish_user_paths ~/bin/
 ```
 
 ### Other installed packges
