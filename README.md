@@ -74,6 +74,25 @@ $ cd rime && make
 
 Remember click deploy after updated configure.
 
+### tmux
+
+```
+$ brew install tmux
+$ cd tmux
+$ make
+```
+
+### Fish
+
+```
+$ brew install fish
+$ echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
+$ chsh -s /usr/local/bin/fish
+$ curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish
+$ omf install edan
+$ omf install sublime
+```
+
 ### Other installed packges
 
 + [stormssh](https://github.com/emre/storm)
