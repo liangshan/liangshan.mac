@@ -1,0 +1,14 @@
+{
+    "workbench.welcome.enabled": false,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/__pycache__": true,
+        "**/*.egg-info": true
+    },
+    "window.zoomLevel": 1,
+    "files.insertFinalNewline": true,
+    "git.confirmSync": false
+}

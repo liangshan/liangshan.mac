@@ -20,59 +20,15 @@ $ cd bash && make
 [2]: https://github.com/erning/git-ps1
 [3]: https://github.com/bobthecow/git-flow-completion/wiki/Install-Bash-git-completion
 
+### vscode
 
-### Sublime Text 3
+installed extensions:
 
-1. install [package control](https://packagecontrol.io/installation) first
-2. install `Theme - Tech49`, otherwise sublime will raise exception
-3. install configure
-
-```
-$ cd sublime && make
-```
-
-This will make subl executable in the command line:
-
-```
-$ ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl ~/bin/subl
-```
-
-#### Useful packages
-
-__NOTICE__: You have to install SublimeLinter first, then install all other `SublimeLinter` prefix packages
-
-```
-{
-    "installed_packages":
-    [
-        "EditorConfig",
-        "Git",
-        "Jedi - Python autocompletion",
-        "Markdown Extended",
-        "Markdown Preview",
-        "Open Finder",
-        "Package Control",
-        "Python PEP8 Autoformat",
-        "SublimeLinter",
-        "SublimeLinter-jshint",
-        "SublimeLinter-php",
-        "SublimeLinter-pylint",
-        "Theme - Tech49"
-    ]
-}
-```
-
-### Rime
-
-Download extended dictionary:
-
-https://bintray.com/rime-aca/dictionaries/luna_pinyin.dict
-
-```
-$ cd rime && make
-```
-
-Remember click deploy after updated configure.
++ Blank Line at the End of File
++ Makrdown Theme Kit
++ Python
++ Sublime Text Keymap
++ Vue 2 Snippets
 
 ### tmux
 
