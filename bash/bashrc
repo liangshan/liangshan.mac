@@ -26,11 +26,20 @@ fi
 
 # ll
 alias ll='ls -alh'
+alias ping='prettyping --nolegend'
+alias cat='bat'
+alias mstart='minikube start --image-mirror-country=cn --kubernetes-version=v1.15.0 --insecure-registry=172.16.3.234:5000 --memory=8000'
 
 # phpbrew
-if [ -f "$HOME/.phpbrew/bashrc" ]; then
+if [ -f $HOME/.phpbrew/bashrc ]; then
   source $HOME/.phpbrew/bashrc
 fi
 
+# java
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+# go
+export GOPATH=$HOME/apps/go
+
 # PATH
-export PATH="$HOME/bin:/usr/local/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
+export PATH="$HOME/bin:/usr/local/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$GOPATH/bin"

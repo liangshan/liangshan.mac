@@ -5,7 +5,7 @@
 
 [user]
     name = liangshan
-    email = 2lisum3@gmail.com
+    email = liang.shan@qianka.com
 
 [alias]
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
@@ -13,4 +13,5 @@
     co = checkout
     st = status -sb
     track = checkout -t
+    recent = for-each-ref --count=10 --sort=-committerdate refs/heads/ --format="%(refname:short)"
 
