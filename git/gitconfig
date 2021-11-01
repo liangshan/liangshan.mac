@@ -15,3 +15,5 @@
     track = checkout -t
     recent = for-each-ref --count=10 --sort=-committerdate refs/heads/ --format="%(refname:short)"
 
+[pull]	
+    rebase = false

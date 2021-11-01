@@ -19,10 +19,8 @@ if [ -f $HOME/bin/git-ps1.sh ]; then
     PS1="$PS1\$($( cat $HOME/bin/git-ps1.sh ))"
 fi
 
-# git bash completion
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-    . `brew --prefix`/etc/bash_completion
-fi
+# bash completion
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 # ll
 alias ll='ls -alh'
