@@ -40,4 +40,4 @@ export JAVA_HOME=$(/usr/libexec/java_home -v1.8.0)
 export GOPATH=$HOME/apps/go
 
 # PATH
-export PATH="$HOME/bin:/usr/local/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/go/bin:$GOPATH/bin"
+export PATH="$HOME/bin:/opt/homebrew/bin:/usr/local/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/go/bin:$GOPATH/bin"
