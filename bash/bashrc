@@ -1,11 +1,11 @@
 # Tell ls to be colourful
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
- 
+
 # Tell grep to highlight matches
 export GREP_OPTIONS='--color=auto'
 
-# user {pwd} ~ $ 
+# user {pwd} ~ $
 export TERM="xterm-color"
 
 if [[ ${EUID} == 0 ]]; then
@@ -26,7 +26,6 @@ fi
 alias ll='ls -alh'
 alias ping='prettyping --nolegend'
 alias cat='bat'
-alias mstart='minikube start --image-mirror-country=cn --kubernetes-version=v1.15.0 --insecure-registry=172.16.3.234:5000 --memory=8000'
 
 # phpbrew
 if [ -f $HOME/.phpbrew/bashrc ]; then
