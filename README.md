@@ -3,42 +3,63 @@ liangshan.mac
 
 All my personal Mac related configure here.
 
-### Git & Bash
+### Prerequisites
 
-+ [Install homebrew][1], then
-    + `brew install git`
-    + `brew install bash-completion`
-    + `brew install prettyping`
-    + `brew install bat`
-+ [Install git-ps1][2]
+Install [Homebrew](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/Installation.md#installation), then:
 
-```
-$ cd git && make
-$ cd bash && make
-```
+```bash
+# Install essential tools
+brew install git
+brew install prettyping
+brew install bat
+brew install tmux
 
-[1]: https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/Installation.md#installation
-[2]: https://github.com/erning/git-ps1
-
-### vscode
-
-installed extensions:
-
-+ Blank Line at the End of File
-+ Makrdown Theme Kit
-+ Python
-+ Sublime Text Keymap
-
-### tmux
-
-```
-$ brew install tmux
-$ cd tmux
-$ make
+# Install git-ps1 (optional, for git prompt)
+# https://github.com/erning/git-ps1
 ```
 
-### Other installed packges
+### Quick Install
 
-+ [stormssh](https://github.com/emre/storm)
-+ [Karabiner-Elements](https://karabiner-elements.pqrs.org/)
-+ [spectable](https://github.com/eczarny/spectacle)
+Install all configurations with one command:
+
+```bash
+make
+```
+
+Or install individually:
+
+```bash
+# Git configuration
+cd git && make
+
+# Zsh configuration
+cd zsh && make
+
+# Tmux configuration
+cd tmux && make
+```
+
+### Configurations
+
+#### Git
+- Personal git config with aliases and settings
+- Location: `git/gitconfig` → `~/.gitconfig`
+
+#### Zsh
+- Complete zsh configuration with:
+  - Smart PATH detection (Apple Silicon/Intel)
+  - Enhanced completion system
+  - Git status in prompt
+  - History sharing between sessions
+  - Custom aliases and functions
+- Location: `zsh/zshrc` → `~/.zshrc`
+
+#### Tmux
+- Tmux terminal multiplexer configuration
+- Location: `tmux/tmux.conf` → `~/.tmux.conf`
+
+### Other Installed Packages
+
+- [stormssh](https://github.com/emre/storm) - SSH config manager
+- [Karabiner-Elements](https://karabiner-elements.pqrs.org/) - Keyboard customizer
+- [spectacle](https://github.com/eczarny/spectacle) - Window manager

@@ -1,0 +1,181 @@
+# =============================================================================
+# Zsh Configuration
+# =============================================================================
+
+# =============================================================================
+# Paths
+# =============================================================================
+typeset -U path PATH  # Remove duplicates from PATH
+
+# Detect Homebrew architecture
+if [[ -d "/opt/homebrew" ]]; then
+  # Apple Silicon Mac
+  HOMEBREW_PREFIX="/opt/homebrew"
+elif [[ -d "/usr/local" ]]; then
+  # Intel Mac
+  HOMEBREW_PREFIX="/usr/local"
+else
+  HOMEBREW_PREFIX=""
+fi
+
+path=(
+  "$HOME/bin"
+  "$HOME/.local/bin"
+  "$HOMEBREW_PREFIX/bin"
+  "$HOMEBREW_PREFIX/share/npm/bin"
+  "/usr/bin"
+  "/bin"
+  "$HOMEBREW_PREFIX/sbin"
+  "/usr/local/sbin"
+  "/usr/sbin"
+  "/sbin"
+  "$HOMEBREW_PREFIX/go/bin"
+  "$GOPATH/bin"
+  $path
+)
+
+# =============================================================================
+# Environment Variables
+# =============================================================================
+export EDITOR=vim
+export VISUAL=vim
+export CLICOLOR=1
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+export GREP_OPTIONS='--color=auto'
+export TERM="xterm-color"
+
+# Java
+export JAVA_HOME=$(/usr/libexec/java_home -v1.8.0)
+
+# Go
+export GOPATH=$HOME/apps/go
+
+# =============================================================================
+# History Configuration
+# =============================================================================
+HISTFILE=$HOME/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt SHARE_HISTORY            # Share history between all sessions
+setopt HIST_IGNORE_DUPS         # Don't record duplicate entries
+setopt HIST_IGNORE_SPACE        # Ignore commands starting with space
+setopt HIST_REDUCE_BLANKS       # Remove superfluous blanks
+setopt EXTENDED_HISTORY         # Write timestamps in history
+setopt INC_APPEND_HISTORY       # Write to history file immediately
+
+# =============================================================================
+# Directory Options
+# =============================================================================
+setopt AUTO_CD                  # Change directory without typing cd
+setopt AUTO_PUSHD               # Push directory to stack on cd
+setopt PUSHD_IGNORE_DUPS        # Don't push duplicates to stack
+setopt PUSHD_SILENT             # Don't print stack on pushd/popd
+
+# =============================================================================
+# Prompt Configuration
+# =============================================================================
+autoload -Uz colors && colors
+autoload -Uz vcs_info
+
+# Enable git status in prompt
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:*' formats ' %F{green}%b%f'
+zstyle ':vcs_info:*' actionformats ' %F{red}%b|%a%f'
+
+precmd() {
+  vcs_info
+}
+
+# Custom prompt
+setopt PROMPT_SUBST
+PROMPT='%F{green}%n%f%F{yellow} %1~%f${vcs_info_msg_0_}%F{blue} %#%f '
+
+# =============================================================================
+# Aliases
+# =============================================================================
+alias ll='ls -alh'
+alias ping='prettyping --nolegend'
+alias cat='bat'
+alias mstart='minikube start --image-mirror-country=cn --kubernetes-version=v1.15.0 --insecure-registry=172.16.3.234:5000 --memory=8000'
+
+# =============================================================================
+# Third-party Integrations
+# =============================================================================
+
+# phpbrew
+if [ -f "$HOME/.phpbrew/bashrc" ]; then
+  source "$HOME/.phpbrew/bashrc"
+fi
+
+# pyenv (check if it exists)
+if command -v pyenv &> /dev/null; then
+  eval "$(pyenv init -)"
+fi
+
+# =============================================================================
+# Zsh Completions
+# =============================================================================
+
+# Add Homebrew completions to fpath
+if [[ -n "$HOMEBREW_PREFIX" ]]; then
+  # Add zsh-completions (if installed)
+  if [ -d "$HOMEBREW_PREFIX/share/zsh-completions" ]; then
+    fpath=("$HOMEBREW_PREFIX/share/zsh-completions" $fpath)
+  fi
+
+  # Add Homebrew site-functions
+  if [ -d "$HOMEBREW_PREFIX/share/zsh/site-functions" ]; then
+    fpath=("$HOMEBREW_PREFIX/share/zsh/site-functions" $fpath)
+  fi
+fi
+
+# Add additional completion directories
+if [ -d "$HOME/.zsh/completions" ]; then
+  fpath=("$HOME/.zsh/completions" $fpath)
+fi
+
+# Force rebuild of completion cache (run this after installing new completions)
+# rm -f ~/.zcompdump && compinit
+
+# Initialize completions
+autoload -Uz compinit && compinit
+
+# Enhanced completion styles
+zstyle ':completion:*' menu select                    # Menu selection
+zstyle ':completion:*' list-colors ''                 # Colors
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'  # Case-insensitive
+zstyle ':completion:*' verbose yes                    # Show descriptions
+zstyle ':completion:*' group-name ''                  # Group by type
+zstyle ':completion:*:descriptions' format '%F{yellow}%B%d%b%f'  # Description format
+zstyle ':completion:*:warnings' format '%F{red}No matches for: %d%f'  # No match message
+zstyle ':completion:*' use-cache on                   # Use completion cache
+zstyle ':completion:*' cache-path "$HOME/.zcompcache" # Cache location
+
+# Kill process completion
+zstyle ':completion:*:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
+
+# =============================================================================
+# User-defined Functions
+# =============================================================================
+
+# Create directory and cd into it
+mkcd() {
+  mkdir -p "$1" && cd "$1"
+}
+
+# =============================================================================
+# Key Bindings
+# =============================================================================
+bindkey -e  # Use emacs-style key bindings (default)
+bindkey '^[[A' history-search-backward    # Up arrow
+bindkey '^[[B' history-search-forward     # Down arrow
+bindkey '^R' history-incremental-search-backward
+
+# =============================================================================
+# OS-specific Settings
+# =============================================================================
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  # macOS specific settings
+  # Add any macOS-specific configurations here
+fi
